@@ -457,6 +457,11 @@ h3 {
 }
 
 @media (max-width: 600px) {
+  .event-hero {
+    height: auto;
+    object-fit: contain;
+  }
+
   .carousel-page {
     grid-template-columns: 1fr;
   }
