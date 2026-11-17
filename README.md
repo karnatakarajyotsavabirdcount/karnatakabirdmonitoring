@@ -4,6 +4,10 @@
 
 The shared markup is in `partials/header.html` and `partials/footer.html`. Pages include `#site-header` and `#site-footer` placeholders and load `js/layout.js`; edit the partials to update the navigation or footer across the site. Serve the project over HTTP so the browser can fetch these files.
 
+## Resources page
+
+The district volunteer list is generated in `js/resources.js`; replace the demo names there with real volunteer names. Update the tutorial `href` values and certificate generator link in `resources.html` when their URLs are available.
+
 ## Adding events
 
 Event data lives in a separate JSON file for each event:
