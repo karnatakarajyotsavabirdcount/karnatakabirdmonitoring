@@ -73,14 +73,31 @@ a {
 }
 
 .hero {
+  position: relative;
+  color: var(--white);
+  background: var(--green-dark);
+  text-align: center;
+}
+
+.hero-slide {
+  display: none;
+  min-height: 390px;
+  padding: 100px 0 94px;
   background:
     linear-gradient(rgba(16, 61, 19, 0.75), rgba(16, 61, 19, 0.75)),
-    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=70");
-  background-size: cover;
-  background-position: center;
-  color: var(--white);
-  padding: 110px 0;
-  text-align: center;
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=70") center / cover;
+}
+
+.hero-slide.is-active {
+  display: block;
+}
+
+.hero-slide[hidden] {
+  display: none;
+}
+
+.hero-slide--contest {
+  background: linear-gradient(120deg, #103d13, #28733a);
 }
 
 .hero h1 {
@@ -100,6 +117,66 @@ a {
   gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.contest-mark {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  margin: 0 auto 14px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.hero-carousel-controls {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.hero-carousel-control,
+.hero-carousel-indicator {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.hero-carousel-control {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  font: inherit;
+}
+
+.hero-carousel-control:hover,
+.hero-carousel-control:focus-visible,
+.hero-carousel-indicator.is-active {
+  background: var(--white);
+  color: var(--green-dark);
+}
+
+.hero-carousel-indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-carousel-indicator {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
 }
 
 .btn {
@@ -122,6 +199,14 @@ a {
 
 .section {
   padding: 64px 0;
+}
+
+.home-page > .section {
+  padding: 30px 0;
+}
+
+.home-page > .section h2:first-child {
+  margin-top: 0;
 }
 
 .section.alt {
@@ -482,7 +567,8 @@ h3 {
     flex-direction: column;
   }
 
-  .hero {
-    padding: 75px 0;
+  .hero-slide {
+    min-height: 370px;
+    padding: 70px 0 78px;
   }
 }

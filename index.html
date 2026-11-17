@@ -7,20 +7,43 @@
   <meta name="description" content="Karnataka Bird Monitoring Network documents and conserves Karnataka’s birdlife through citizen science, monitoring, education, and community participation." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="home-page">
   <div id="site-header"></div>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Documenting Karnataka’s Birds, Together</h1>
-      <p>
-        Join a growing community of birdwatchers, students, researchers, and nature lovers
-        working to observe, record, and protect Karnataka’s remarkable birdlife.
-      </p>
-      <div class="hero-actions">
-        <a class="btn" href="events.html">Join an Event</a>
-        <a class="btn btn-outline" href="articles.html">Read Field Stories</a>
+  <section class="hero" data-hero-carousel role="region" aria-roledescription="carousel" aria-label="Featured announcements">
+    <div class="hero-slide is-active" data-hero-slide>
+      <div class="container">
+        <h1>Documenting Karnataka’s Birds, Together</h1>
+        <p>
+          Join a growing community of birdwatchers, students, researchers, and nature lovers
+          working to observe, record, and protect Karnataka’s remarkable birdlife.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="events.html">Join an Event</a>
+          <a class="btn btn-outline" href="articles.html">Read Field Stories</a>
+        </div>
       </div>
+    </div>
+    <div class="hero-slide hero-slide--contest" data-hero-slide hidden>
+      <div class="container">
+        <div class="contest-mark" aria-hidden="true">KBMN</div>
+        <h1>Help Design Our New Logo</h1>
+        <p>
+          We’re inviting the birding community to imagine a fresh identity for the Karnataka Bird
+          Monitoring Network. Share your creativity and help shape a logo that celebrates Karnataka’s birds.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="https://forms.gle/GmUYFaZKBps8eegh6" target="_blank" rel="noopener noreferrer">Join the Contest</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-carousel-controls" aria-label="Banner controls">
+      <button class="hero-carousel-control" type="button" data-hero-previous aria-label="Previous banner">&larr;</button>
+      <div class="hero-carousel-indicators">
+        <button class="hero-carousel-indicator is-active" type="button" data-hero-indicator="0" aria-label="Show banner 1" aria-current="true"></button>
+        <button class="hero-carousel-indicator" type="button" data-hero-indicator="1" aria-label="Show banner 2"></button>
+      </div>
+      <button class="hero-carousel-control" type="button" data-hero-next aria-label="Next banner">&rarr;</button>
     </div>
   </section>
 
@@ -72,5 +95,6 @@
   <script src="js/data.js"></script>
   <script src="js/event.js"></script>
   <script src="js/articles.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
