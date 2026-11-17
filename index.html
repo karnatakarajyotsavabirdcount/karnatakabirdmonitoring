@@ -8,17 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">Karnataka Bird Monitoring Network</a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="events.html">Events</a>
-        <a href="articles.html">Articles</a>
-        <a href="about.html">About Us</a>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <section class="hero">
     <div class="container">
@@ -60,30 +50,6 @@
     </div>
   </section>
 
-  <section class="section alt">
-    <div class="container">
-      <h2>Karnataka’s Bird Habitats</h2>
-      <div class="grid four">
-        <div class="habitat-card">
-          <h3>Western Ghats Forests</h3>
-          <p>Evergreen and moist deciduous forests support hornbills, barbets, woodpeckers, flycatchers, and forest understory birds.</p>
-        </div>
-        <div class="habitat-card">
-          <h3>Wetlands and Rivers</h3>
-          <p>Lakes, tanks, reservoirs, and river systems provide vital habitat for herons, storks, pelicans, cormorants, and migratory waterbirds.</p>
-        </div>
-        <div class="habitat-card">
-          <h3>Grasslands and Farmland</h3>
-          <p>Open landscapes support larks, bush quail, lapwings, rollers, francolins, and open-country raptors.</p>
-        </div>
-        <div class="habitat-card">
-          <h3>Urban Green Spaces</h3>
-          <p>Parks, lakes, gardens, and campus greenery offer accessible places for everyday birdwatching and monitoring.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
       <h2>Upcoming Events</h2>
@@ -100,53 +66,11 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Karnataka Bird Monitoring Network</h3>
-        <p>A community-led initiative to document, monitor, and conserve Karnataka’s birdlife through citizen science and public participation.</p>
-      </div>
+  <div id="site-footer"></div>
 
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Contact Us</h4>
-        <p>Email: <a href="mailto:hello@karnatakabirds.org">hello@karnatakabirds.org</a></p>
-        <p>Phone: <a href="tel:+910000000000">+91 00000 00000</a></p>
-        <p>Karnataka, India</p>
-      </div>
-
-      <div>
-        <h4>Follow Us</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="https://ebird.org/region/IN-KA" target="_blank" rel="noopener">eBird Karnataka</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© <span id="year"></span> Karnataka Bird Monitoring Network. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
+  <script src="js/layout.js"></script>
   <script src="js/data.js"></script>
-  <script src="js/events.js"></script>
+  <script src="js/event.js"></script>
   <script src="js/articles.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
