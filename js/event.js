@@ -6,7 +6,7 @@ function getEventIdFromUrl() {
 }
 
 async function loadEvents() {
-  const manifestResponse = await fetch("events/index.json");
+  const manifestResponse = await fetch("events/index.json", { cache: "no-store" });
   if (!manifestResponse.ok) {
     throw new Error(`Unable to load event index (${manifestResponse.status}).`);
   }
@@ -18,7 +18,7 @@ async function loadEvents() {
 
   return Promise.all(
     manifest.events.map(async eventPath => {
-      const eventResponse = await fetch(eventPath);
+      const eventResponse = await fetch(eventPath, { cache: "no-store" });
       if (!eventResponse.ok) {
         throw new Error(`Unable to load event data from ${eventPath} (${eventResponse.status}).`);
       }
@@ -29,18 +29,24 @@ async function loadEvents() {
 }
 
 function createEventCard(event) {
+  const isExternal = Boolean(event.link);
   const isPast = event.type === "past";
-  const action = isPast
-    ? `<a class="btn" href="event.html?id=${event.id}">Read Report</a>`
-    : `<a class="btn" href="event.html?id=${event.id}">View Details</a>`;
+  const action = isExternal
+    ? `<a class="btn" href="${event.link}" target="_blank" rel="noopener noreferrer">View on Bird Count India</a>`
+    : isPast
+      ? `<a class="btn" href="event.html?id=${event.id}">Read Report</a>`
+      : `<a class="btn" href="event.html?id=${event.id}">View Details</a>`;
+  const dateAndLocation = event.location
+    ? `${event.date} • ${event.location}`
+    : event.date;
 
   return `
     <article class="event-card">
-      <img src="${event.image}" alt="${event.title}" loading="lazy" />
+      <img src="${event.thumbnail || event.image}" alt="${event.title}" loading="lazy" />
       <span class="tag">${event.category}</span>
       <h3>${event.title}</h3>
-      <p class="event-meta">${event.date} • ${event.location}</p>
-      <p>${event.shortDescription}</p>
+      <p class="event-meta">${dateAndLocation}</p>
+      <p>${isExternal ? event.description : event.shortDescription}</p>
       ${action}
     </article>
   `;
@@ -51,7 +57,13 @@ function renderEvents(filter = "all") {
   if (!container) return;
 
   const filteredEvents =
-    filter === "all" ? EVENTS : EVENTS.filter(event => event.type === filter);
+    filter === "all"
+      ? EVENTS
+      : EVENTS.filter(event =>
+          filter === "future"
+            ? Boolean(event.link) || event.type === "future"
+            : event.type === filter
+        );
 
   container.innerHTML = filteredEvents.map(createEventCard).join("");
 }
@@ -60,7 +72,7 @@ function renderHomeEvents() {
   const container = document.getElementById("home-upcoming-events");
   if (!container) return;
 
-  const upcoming = EVENTS.filter(event => event.type === "future").slice(0, 3);
+  const upcoming = EVENTS.filter(event => event.link || event.type === "future").slice(0, 3);
   container.innerHTML = upcoming.map(createEventCard).join("");
 }
 

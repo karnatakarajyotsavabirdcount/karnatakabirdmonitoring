@@ -13,20 +13,30 @@ async function loadLayoutFragment(selector, path) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  const isNewsDetail = window.location.pathname.includes("/news/");
+  const relativePrefix = isNewsDetail ? "../" : "";
+
   try {
     await Promise.all([
-      loadLayoutFragment("#site-header", "partials/header.html"),
-      loadLayoutFragment("#site-footer", "partials/footer.html")
+      loadLayoutFragment("#site-header", `${relativePrefix}partials/header.html`),
+      loadLayoutFragment("#site-footer", `${relativePrefix}partials/footer.html`)
     ]);
 
     const page = window.location.pathname.split("/").pop() || "index.html";
     const activePage = {
-      "article.html": "articles.html",
+      "krbc-preliminary-results.html": "news.html",
       "event.html": "events.html"
     }[page] || page;
 
+    document.querySelectorAll("#site-header a, #site-footer a").forEach(link => {
+      const href = link.getAttribute("href");
+      if (isNewsDetail && href && !/^(?:[a-z]+:|\/\/|#)/i.test(href)) {
+        link.setAttribute("href", `../${href}`);
+      }
+    });
+
     document.querySelectorAll(".main-nav a").forEach(link => {
-      if (link.getAttribute("href") === activePage) {
+      if (link.getAttribute("href").replace(/^\.\.\//, "") === activePage) {
         link.classList.add("active");
         link.setAttribute("aria-current", "page");
       }
