@@ -3,33 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Articles | Karnataka Bird Monitoring Network</title>
+  <title>News & Updates | Karnataka Bird Monitoring Network</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div id="site-header"></div>
 
-  <main class="page">
-    <div class="container">
-      <h1>Articles</h1>
-      <p>Field notes, birding experiences, monitoring updates, species stories, and conservation reflections from across Karnataka.</p>
+  <main class="report-page">
+    <article class="preliminary-report">
+      <section class="report-sheet report-cover">
+        <div class="report-topline"></div>
+        <header class="report-header">
+          <span class="tag">News & Updates</span>
+          <h1>Karnataka Rajyotsava Bird Count 2026</h1>
+          <p class="report-subtitle">Preliminary results, 30 October to 2 November 2026</p>
+        </header>
 
-      <div class="article-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="Field Notes">Field Notes</button>
-        <button class="filter-btn" data-filter="Citizen Science">Citizen Science</button>
-        <button class="filter-btn" data-filter="Species Spotlight">Species Spotlight</button>
-        <button class="filter-btn" data-filter="Conservation">Conservation</button>
-      </div>
+        <p class="report-lead">The Karnataka Rajyotsava Bird Count (KRBC) ran for four days. Anyone could join by watching birds for at least 15 minutes and uploading a complete checklist to eBird. Here is what came in.</p>
 
-      <div id="articles-container" class="article-grid"></div>
-    </div>
+        <div class="report-stats">
+          <div><strong>2,252</strong><span>birders</span></div>
+          <div><strong>8,223</strong><span>checklists</span></div>
+          <div><strong>407</strong><span>species</span></div>
+          <div><strong>31</strong><span>districts</span></div>
+        </div>
+
+        <h2>Day by day</h2>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead><tr><th>Day</th><th>Date</th><th>Birders</th><th>Checklists</th><th>Species</th></tr></thead>
+            <tbody>
+              <tr><td>Day 1</td><td>30 Oct</td><td>1,082</td><td>1,775</td><td>343</td></tr>
+              <tr><td>Day 2</td><td>31 Oct</td><td>1,461</td><td>2,356</td><td>380</td></tr>
+              <tr><td>Day 3</td><td>1 Nov</td><td>1,380</td><td>2,138</td><td>366</td></tr>
+              <tr><td>Day 4</td><td>2 Nov</td><td>1,095</td><td>1,954</td><td>364</td></tr>
+              <tr class="report-total"><td>All days</td><td></td><td>2,252</td><td>8,223</td><td>407</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note">The birders figure for all days counts each person once, even if they went out on more than one day. These are preliminary numbers from the checklists uploaded so far, and may change a little before the final report.</p>
+      </section>
+
+      <section class="report-sheet">
+        <h2>District totals</h2>
+        <p>Bengaluru Urban had the most birders (341) and the most checklists (788). Uttara Kannada recorded the most species (300), with Mysuru next (260). Districts are listed by number of birders.</p>
+        <div class="district-totals">
+          <div class="district-chart"><h3>Birders</h3><div class="bar-list" data-bars="birders"></div></div>
+          <div class="district-chart"><h3>Checklists</h3><div class="bar-list" data-bars="checklists"></div></div>
+          <div class="district-chart"><h3>Species</h3><div class="bar-list" data-bars="species"></div></div>
+        </div>
+      </section>
+
+      <section class="report-sheet">
+        <h2>Day by day</h2>
+        <p>Day 2 was the busiest day, with 1,461 birders, 2,356 checklists and 380 species. Day 3 and Day 4 were lower than Day 2, but both had more checklists and species than Day 1.</p>
+        <div class="day-metrics">
+          <div><h3>Birders</h3><div class="day-bars"><span style="--h:74%"><b>1,082</b><small>Day 1</small></span><span style="--h:100%"><b>1,461</b><small>Day 2</small></span><span style="--h:94%"><b>1,380</b><small>Day 3</small></span><span style="--h:75%"><b>1,095</b><small>Day 4</small></span></div></div>
+          <div><h3>Checklists</h3><div class="day-bars orange"><span style="--h:75%"><b>1,775</b><small>Day 1</small></span><span style="--h:100%"><b>2,356</b><small>Day 2</small></span><span style="--h:91%"><b>2,138</b><small>Day 3</small></span><span style="--h:83%"><b>1,954</b><small>Day 4</small></span></div></div>
+          <div><h3>Species</h3><div class="day-bars green"><span style="--h:90%"><b>343</b><small>Day 1</small></span><span style="--h:100%"><b>380</b><small>Day 2</small></span><span style="--h:96%"><b>366</b><small>Day 3</small></span><span style="--h:96%"><b>364</b><small>Day 4</small></span></div></div>
+        </div>
+        <h3>Leading district each day</h3>
+        <div class="report-table-wrap"><table class="report-table"><thead><tr><th>Day</th><th>Most checklists</th><th>Most species</th><th>Most birders</th></tr></thead><tbody><tr><td>Day 1</td><td>Bengaluru Urban (215)</td><td>Uttara Kannada (216)</td><td>Bengaluru Urban (143)</td></tr><tr><td>Day 2</td><td>Bengaluru Urban (225)</td><td>Uttara Kannada (250)</td><td>Bengaluru Urban (170)</td></tr><tr><td>Day 3</td><td>Bengaluru Urban (231)</td><td>Uttara Kannada (244)</td><td>Bengaluru Urban (198)</td></tr><tr><td>Day 4</td><td>Tumakuru (308)</td><td>Chamarajanagara (198)</td><td>Bengaluru Urban (96)</td></tr></tbody></table></div>
+      </section>
+
+      <section class="report-sheet">
+        <h2>Heat map: districts and days</h2>
+        <p>Each box is one district on one day. The darker the box, the more checklists (left) or species (right). Districts are listed most to least checklists. Tumakuru stands out, with 17 checklists on Day 1 and 389 on Day 4.</p>
+        <div class="heatmap-intro">
+          <div class="heatmap-block">
+            <h3>Checklists per day</h3>
+            <div class="heatmap-grid" id="checklist-heatmap"></div>
+          </div>
+          <div class="heatmap-block">
+            <h3>Species per day</h3>
+            <div class="heatmap-grid" id="species-heatmap"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="report-sheet">
+        <h2>Species map</h2>
+        <p>Each square is a district, placed roughly where it sits in Karnataka. The map is not to scale. Darker green means more species recorded within 300 days. Uttara Kannada (300), Vijayanagara (260) and Mysuru (260), and Bengaluru Urban (241).</p>
+        <div class="district-map species-map" id="species-map"></div>
+      </section>
+
+      <section class="report-sheet">
+        <h2>Effort map</h2>
+        <p>Each square is shaded by the number of checklists submitted. Bengaluru Urban (788), Tumakuru (686), and Chamarajanagara (613) sent in the most checklists.</p>
+        <div class="district-map effort-map" id="effort-map"></div>
+      </section>
+
+      <section class="report-sheet">
+        <h2>Seen everywhere, and seen in one place</h2>
+        <p>52 species were recorded in all 30 eBird regions. These are Karnataka’s everyday birds. 32 species were recorded in only one district. Udupi and Uttara Kannada had 10 each. Most of these are shorebirds, wetland birds and a few rare visitors.</p>
+        <p>Some notable singles included Bar-tailed Godwit, Besra, Black Biter, Common Tern, Eurasian Hobby, Eurasian Oystercatcher, Pied Avocet, Siberian Stonechat, Blyth’s Swift, and many others. The final report may update these lists.</p>
+        <div class="report-table-wrap"><table class="report-table"><thead><tr><th>District</th><th>Species</th></tr></thead><tbody><tr><td>Udupi (10)</td><td>Bar-tailed Godwit, Besra, Black Biter, Common Tern, Eurasian Hobby, Eurasian Oystercatcher, Pied Avocet, Siberian Stonechat, Slaty-breasted Rail, Thinner-billed Stork</td></tr><tr><td>Uttara Kannada (10)</td><td>Black-breasted Weaver, Blyth’s Swift, Broad-billed Sandpiper, Dunlin, Great Knot, Little Bunting, Red-backed Shrike, Shikra, Slaty-legged Crake, Western House-Martin</td></tr><tr><td>Chamarajanagara (3)</td><td>Indian Nuthatch, Painted Bush-Quail, Spot-bellied Eagle-Owl</td></tr><tr><td>Kodagu (2)</td><td>Red-headed Vulture, White-rumped Vulture</td></tr><tr><td>Bengaluru Rural (1)</td><td>Eastern Marsh Harrier</td></tr><tr><td>Bengaluru Urban (1)</td><td>Orange-breasted Green-Pigeon</td></tr><tr><td>Bidar (1)</td><td>Curlew Sandpiper</td></tr><tr><td>Chikkaballapura (1)</td><td>Eastern Yellow Wagtail</td></tr><tr><td>Hassan (1)</td><td>Common Flameback</td></tr><tr><td>Mysuru (1)</td><td>White-winged Tern</td></tr><tr><td>Raichur (1)</td><td>Baillon’s Crake</td></tr></tbody></table></div>
+      </section>
+
+      <section class="report-sheet">
+        <h2>The under-birded districts</h2>
+        <p>Before the count, these 17 districts had fewer than 10,000 complete checklists on eBird. Together they sent in 3,202 checklists, which is 38.9% of all checklists in the count. Tumakuru (686) and Hassan (442) led the count. Tumakuru and Hassan were also the two most under-birded districts.</p>
+        <div class="underbirded-bars" id="underbirded-bars"></div>
+      </section>
+    </article>
+
+    <aside class="report-banner" aria-label="Download report summary">
+      <div><span class="tag">Report available</span><h2>Download the complete preliminary report</h2></div>
+      <a class="btn" href="reports/KRBC_2026_preliminary_results.pdf" download>Download report summary PDF</a>
+    </aside>
   </main>
 
   <div id="site-footer"></div>
 
   <script src="js/layout.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/articles.js"></script>
+  <script>
+    const districtTotals = [
+      ["Bengaluru Urban",341,788,241],["Kodagu",185,541,235],["Chamarajanagara",153,613,237],
+      ["Chikkamagaluru",153,498,229],["Belagavi",126,390,221],["Mysuru",123,418,260],
+      ["Uttara Kannada",120,448,300],["Dakshina Kannada",115,353,210],["Bengaluru Rural",109,196,200],
+      ["Udupi",97,243,239],["Tumakuru",91,686,185],["Ballari/Vijayanagara",91,271,192],
+      ["Shivamogga",75,267,200],["Ramanagara",70,258,202],["Hassan",69,442,212],
+      ["Dharwad",56,118,195],["Bidar",56,102,200],["Koppal",54,236,164],
+      ["Chikkaballapura",48,186,198],["Haveri",45,123,161],["Gadag",44,148,210],
+      ["Raichur",44,104,180],["Mandya",41,127,166],["Kolar",35,147,174],
+      ["Davanagere",31,61,147],["Bagalkote",29,191,161],["Chitradurga",23,97,172],
+      ["Kalaburagi",18,79,139],["Yadgiri",15,45,121],["Vijayapura",14,47,90]
+    ];
+
+    districtTotals.forEach(([name, birders, checklists, species]) => {
+      [
+        ["birders", birders, 341],
+        ["checklists", checklists, 788],
+        ["species", species, 300]
+      ].forEach(([key, value, max]) => {
+        const container = document.querySelector(`[data-bars="${key}"]`);
+        if (!container) return;
+        container.insertAdjacentHTML("beforeend",
+          `<div class="bar-row"><span>${name}</span><div class="bar-track"><div class="bar-fill" style="width:${value / max * 100}%"></div></div><b>${value}</b></div>`
+        );
+      });
+    });
+
+    const heatData = {
+      "Bengaluru Urban":[215,225,231,117],"Tumakuru":[17,68,212,389],"Chamarajanagara":[88,161,177,187],
+      "Kodagu":[133,169,126,113],"Shivamogga":[145,153,98,102],"Uttara Kannada":[148,119,111,70],
+      "Hassan":[123,154,76,89],"Mysuru":[147,106,85,80],"Belagavi":[99,110,100,81],
+      "Dakshina Kannada":[71,145,69,68],"Ballari/Vijayanagara":[56,107,50,58],"Shivamogga":[145,153,98,102],
+      "Ramanagara":[63,66,84,43],"Udupi":[41,63,79,60],"Koppal":[50,66,41,41],
+      "Bengaluru Rural":[86,87,43,12],"Bagalkote":[50,27,72,42],"Chikkaballapura":[1,79,63,43],
+      "Kolar":[42,49,31,25],"Mandya":[46,30,24,27],"Gadag":[7,36,38,46],
+      "Haveri":[34,87,43,22],"Dharwad":[8,36,45,29],"Raichur":[5,25,42,32],
+      "Bidar":[6,10,69,17],"Chitradurga":[21,32,22,22],"Kalaburagi":[10,53,9,7],
+      "Davanagere":[9,18,17,17],"Vijayapura":[12,14,8,13],"Yadgiri":[13,18,8,6]
+    };
+    const heatNames = Object.keys(heatData);
+    const speciesHeat = {
+      "Bengaluru Urban":[187,209,202,195],"Tumakuru":[62,142,147,176],"Chamarajanagara":[172,183,185,198],
+      "Kodagu":[162,204,184,192],"Shivamogga":[178,161,176,176],"Uttara Kannada":[216,250,244,198],
+      "Hassan":[156,165,136,139],"Mysuru":[183,207,202,156],"Belagavi":[142,158,153,134],
+      "Dakshina Kannada":[117,176,155,146],"Ballari/Vijayanagara":[145,154,153,156],"Ramanagara":[160,167,156,140],
+      "Udupi":[150,161,173,166],"Koppal":[105,131,140,140],"Bengaluru Rural":[139,150,180,137],
+      "Bagalkote":[111,111,145,109],"Chikkaballapura":[1,156,166,141],"Kolar":[120,139,117,137],
+      "Mandya":[126,105,117,97],"Gadag":[92,133,140,140],"Haveri":[93,143,132,144],
+      "Dharwad":[93,143,132,144],"Raichur":[45,106,154,139],"Bidar":[106,132,132,120],
+      "Chitradurga":[112,112,112,74],"Kalaburagi":[72,113,75,63],"Davanagere":[100,110,89,79],
+      "Vijayapura":[60,51,58,37],"Yadgiri":[99,65,65,40]
+    };
+
+    function renderHeatmap(containerId, data, species) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      container.insertAdjacentHTML("beforeend", '<div></div><div class="heatmap-head">Day 1</div><div class="heatmap-head">Day 2</div><div class="heatmap-head">Day 3</div><div class="heatmap-head">Day 4</div>');
+      const allValues = Object.values(data).flat();
+      const max = Math.max(...allValues);
+      heatNames.forEach(name => {
+        container.insertAdjacentHTML("beforeend", `<div class="heatmap-name">${name}</div>`);
+        data[name].forEach(value => {
+          const intensity = value / max;
+          const color = species
+            ? `rgb(${Math.round(238 - intensity * 178)},${Math.round(244 - intensity * 90)},${Math.round(232 - intensity * 73)})`
+            : `rgb(${Math.round(250 - intensity * 90)},${Math.round(215 - intensity * 145)},${Math.round(160 - intensity * 115)})`;
+          container.insertAdjacentHTML("beforeend", `<div class="heatmap-cell" style="background:${color};color:${intensity > 0.55 ? '#fff' : '#3a3026'}">${value}</div>`);
+        });
+      });
+    }
+    renderHeatmap("checklist-heatmap", heatData, false);
+    renderHeatmap("species-heatmap", speciesHeat, true);
+
+    const positions = [
+      [1,2,"Belagavi",221],[2,2,"Vijayapura",90],[3,2,"Kalaburagi",139],[4,2,"Bidar",200],
+      [0,3,"Uttara<br>Karnataka",300],[1,3,"Dharwad",195],[2,3,"Bagalkote",161],[3,3,"Yadgiri",121],[4,3,"Raichur",180],
+      [1,4,"Haveri",161],[2,4,"Gadag",210],[3,4,"Koppal",164],[4,4,"Ballari<br>Vijayanagara",192],
+      [1,5,"Shivamogga",200],[2,5,"Davanagere",147],[3,5,"Chitradurga",172],[4,5,"Chikkaballapura",198],
+      [0,6,"Udupi",239],[1,6,"Chikkamagaluru",229],[2,6,"Hassan",212],[3,6,"Tumakuru",185],[4,6,"Bengaluru Rural",200],[5,6,"Kolar",174],
+      [0,7,"Dakshina<brKannada",210],[1,7,"Kodagu",235],[2,7,"Mandya",166],[3,7,"Ramanagara",202],[4,7,"Bengaluru<br>Urban",241],
+      [2,8,"Mysuru",260],[3,8,"Chamarajanagara",237]
+    ];
+    const effort = {
+      "Belagavi":390,"Vijayapura":47,"Kalaburagi":79,"Bidar":102,"Uttara Kannada":448,"Dharwad":118,"Bagalkote":191,"Yadgiri":45,"Raichur":104,
+      "Haveri":123,"Gadag":148,"Koppal":236,"Ballari":271,"Shivamogga":267,"Davanagere":61,"Chitradurga":97,"Chikkaballapura":186,
+      "Udupi":243,"Chikkamagaluru":498,"Hassan":442,"Tumakuru":686,"Bengaluru Rural":196,"Kolar":147,"Dakshina Kannada":353,"Kodagu":541,
+      "Mandya":127,"Ramanagara":258,"Bengaluru Urban":788,"Mysuru":418,"Chamarajanagara":613
+    };
+    function renderMap(containerId, values, species) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      positions.forEach(([col,row,name,value]) => {
+        const numeric = species ? value : (effort[name.replace("<br>"," ").replace("<br />","")] || effort[name] || 0);
+        const shade = species ? 165 + (numeric - 90) * 0.7 : 100 + numeric / 788 * 130;
+        container.insertAdjacentHTML("beforeend",
+          `<div class="map-cell" style="grid-column:${col+1};grid-row:${row};background:rgb(${species ? 135 : 205},${Math.round(shade)},${species ? 150 : 70})">${name}<strong>${numeric}</strong></div>`
+        );
+      });
+    }
+    renderMap("species-map", {}, true);
+    renderMap("effort-map", effort, false);
+
+    const underbirded = [
+      ["Tumakuru",686,["#edcc75","#cf8a36","#a44b27","#7d3d26"]],["Hassan",442],["Belagavi",390],
+      ["Koppal",236],["Bagalkote",191],["Chikkaballapura",186],["Gadag",148],["Kolar",147],
+      ["Haveri",123],["Dharwad",118],["Raichur",104],["Bidar",102],["Chitradurga",97],
+      ["Kalaburagi",79],["Davanagere",61],["Vijayapura",47],["Yadgiri",45]
+    ];
+    const underContainer = document.getElementById("underbirded-bars");
+    underbirded.forEach(([name,value]) => {
+      underContainer.insertAdjacentHTML("beforeend",
+        `<div class="underbirded-row"><span>${name}</span><div class="underbirded-track"><span style="width:${value/686*28}%;background:#edcc75"></span><span style="width:${value/686*20}%;background:#cf8a36"></span><span style="width:${value/686*25}%;background:#a44b27"></span><span style="width:${value/686*27}%;background:#7d3d26"></span></div><b>${value}</b></div>`
+      );
+    });
+  </script>
 </body>
 </html>

@@ -44,12 +44,12 @@ function renderArticleDetail() {
 
   if (!article) {
     container.innerHTML =
-      "<h1>Article not found</h1><p>Please return to the <a href='articles.html'>articles page</a>.</p>";
+      "<h1>Article not found</h1><p>Please return to the <a href='articles.html'>News & Updates page</a>.</p>";
     return;
   }
 
   container.innerHTML = `
-    <a href="articles.html">← Back to Articles</a>
+    <a href="articles.html">← Back to News & Updates</a>
     <span class="tag">${article.category}</span>
     <h1>${article.title}</h1>
     <p class="article-meta">By ${article.author} • ${article.date}</p>
