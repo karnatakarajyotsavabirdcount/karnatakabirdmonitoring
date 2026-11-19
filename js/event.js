@@ -34,7 +34,7 @@ function createEventCard(event) {
   const action = isExternal
     ? `<a class="btn" href="${event.link}" target="_blank" rel="noopener noreferrer">View on Bird Count India</a>`
     : isPast
-      ? `<a class="btn" href="event.html?id=${event.id}">Read Report</a>`
+      ? `<a class="btn" href="event.html?id=${event.id}">View Details</a>`
       : `<a class="btn" href="event.html?id=${event.id}">View Details</a>`;
   const dateAndLocation = event.location
     ? `${event.date} • ${event.location}`
