@@ -14,21 +14,10 @@
       <h1>Resources</h1>
       <p>Find district volunteer contacts, birding tutorials, and the certificate generator in one place.</p>
 
-      <section class="resource-section" aria-labelledby="district-volunteers-heading">
-        <h2 id="district-volunteers-heading">District-wise Volunteers</h2>
-        <p>These sample volunteer names are placeholders and should be replaced with confirmed contacts.</p>
-        <div class="resource-table-wrap">
-          <table class="resource-table">
-            <thead>
-              <tr>
-                <th scope="col">District</th>
-                <th scope="col">Volunteer</th>
-                <th scope="col">Contact</th>
-              </tr>
-            </thead>
-            <tbody id="district-volunteers"></tbody>
-          </table>
-        </div>
+      <section class="resource-section resource-contact" aria-labelledby="district-volunteers-heading">
+        <h2 id="district-volunteers-heading">Connect with District Volunteers</h2>
+        <p>Interested in bird monitoring activities in your district? Get in touch with the Karnataka Bird Monitoring Network through this form.</p>
+        <button class="btn" type="button" id="open-contact-form">Get in touch</button>
       </section>
 
       <section class="resource-section" aria-labelledby="tutorials-heading">
@@ -78,6 +67,23 @@
       </section>
     </div>
   </main>
+
+  <dialog class="resource-modal" id="contact-form-modal" aria-labelledby="contact-form-heading">
+    <div class="resource-modal-header">
+      <h2 id="contact-form-heading">Get in touch</h2>
+      <button class="resource-modal-close" type="button" aria-label="Close contact form" id="close-contact-form">&times;</button>
+    </div>
+    <iframe
+      title="Karnataka Bird Monitoring Network contact form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSffwemOUxfXfrfMz1SG_OTIohr7bWolZzYdhhIMS3rFxR08Rg/viewform?embedded=true"
+      width="640"
+      height="2221"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      loading="lazy"
+    >Loading…</iframe>
+  </dialog>
 
   <div id="site-footer"></div>
 

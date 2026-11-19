@@ -917,6 +917,70 @@ h3 {
   margin: 42px 0;
 }
 
+.resource-contact {
+  padding: 28px;
+  border-radius: 10px;
+  background: var(--green-light);
+}
+
+.resource-contact h2 {
+  margin-top: 0;
+}
+
+.resource-contact p {
+  margin-bottom: 20px;
+}
+
+.resource-modal {
+  width: min(760px, calc(100% - 32px));
+  max-width: none;
+  max-height: 90vh;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.resource-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.resource-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.resource-modal-header h2 {
+  margin: 0;
+}
+
+.resource-modal-close {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.resource-modal iframe {
+  display: block;
+  width: 100%;
+  height: min(75vh, 900px);
+  border: 0;
+}
+
 .resource-table-wrap {
   overflow-x: auto;
   margin-top: 20px;
