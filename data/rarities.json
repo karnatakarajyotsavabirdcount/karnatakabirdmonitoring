@@ -1,0 +1,34 @@
+{
+  "rarities": [
+    {
+      "birdName": "Red backed shrike",
+      "place": "Kumta",
+      "date": "2026-11-01",
+      "birderName": "Tejas K Rao",
+      "description": "A Red-backed Shrike (Lanius collurio) was recorded in Kumta by birders during the Karnataka Rajyotsava Bird Count (held October 30–November 2, 2026) as a state first record.",
+      "checklistUrl": "https://ebird.org/checklist/S407547634",
+      "imageUrl": "data/images/rbsh.png",
+      "pictureCredit": "Tejas K Rao"
+    },
+    {
+      "birdName": "Common Ringed Plover",
+      "place": "Gokarna",
+      "date": "2026-11-14",
+      "birderName": "Shwetha Bharathi",
+      "description": "A Common Ringed Plover (Charadrius hiaticula) was recorded in Gokarna by Shwetha Bharathi as a state first record.",
+      "checklistUrl": "https://ebird.org/checklist/S410429775",
+      "imageUrl": "data/images/crpl.png",
+      "pictureCredit": "Shwetha Bharathi"
+    },
+    {
+      "birdName": "Common Chiffchaff",
+      "place": "Kumta & Bangalore",
+      "date": "2026-11-16",
+      "birderName": "Shwetha Bharathi & Sourav Mandal",
+      "description": "A Common Chiffchaff (Phylloscopus collybita) was recorded in Kumta & Bangalore by Shwetha Bharathi & Sourav Mandal respectively on November 16th and 17th.",
+      "checklistUrl": "https://ebird.org/checklist/S410921956",
+      "imageUrl": "data/images/chiffchaff.png",
+      "pictureCredit": "Shwetha Bharathi"
+    }
+  ]
+}
